@@ -1,0 +1,9 @@
+package check;
+
+public class main {
+ public static void main(String[] args) {
+	pra p1=new pra();
+	Thread t=new Thread(p1);
+	t.start();
+}
+}
