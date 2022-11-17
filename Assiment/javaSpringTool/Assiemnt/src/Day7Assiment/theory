@@ -1,0 +1,127 @@
+  THREADPOOL=>
+      1.DEAMOND THREAD, in java is a service provider thread java that provides service to the user thread user its life depend 
+      mericy of user thread i.e. when  all the user threads dies jvm terminates this  therad automaticly;
+      
+      EXAMPLE;  
+      class threadpool extends Threads{
+      public void run(){
+      if(Thread.currentThread().isDeamon()){
+      System.out.println("deamon thread run");
+      }
+      else{
+      System.out.println("thread run")}
+      }
+      };
+      
+      public class main{
+      public static void main(String[] args){
+      threadpool t1=new threadpool();
+      threadpool t2=new threadpool();
+      threadpool t3=new threadpool();
+      System.out.println("thread main")
+      t1.start();
+      t2.start();
+      t3.start();
+      }
+      };
+      
+      
+      RACE CONDITION=
+      1.IPC is a capiblity suported by opreating System that allow one  pocces  to communication with another procces 
+      the  procces can be runing on the some computer or different computer contected throught a network
+      IPC enable one aplication control another apllication different server applcation shere the same data without intercrapting with 
+      one another;
+      
+      
+      EXAPLE;
+         class firt{
+         public void funA(String name){
+         System.out.println("fist class")
+         try{
+         Thread.sleep(2000);
+         }
+         catch(Exception a){
+         }
+         System.out.println(name);
+         
+         }
+         
+         class second extends Thread{
+         fist f;
+         String name;
+         public second(first f,String name){
+         this.name=name;
+         this.f=f;
+         }
+         @Overide
+         public void run(){
+         f.funA(name);
+         }
+         }
+         
+         
+         class third extends Thread{
+         first f;
+         String name;
+         public third(first f, String name){
+         this.name=name;
+         this.f=f;}
+         @Overide
+         public void run(){
+         f.funA(name)
+         }
+         }   
+         
+         
+         class main{
+         public static void main(String [] args){
+         
+         first f1=new fist();
+         second s1=new second("collage");
+         third s2=new third("apna");
+         s1.start();
+         s2.start();
+         
+         }
+         }
+         
+         output=collage and apna not will be print because second and third class is simultaneously 
+         we will handle it syncronize method 
+         
+         
+         
+         
+         SYNCRONIZEDTION:
+        1. syncronizedtion is a technique through which we can control multiple thread or among number of thread only one 
+        thread will enter inside the syncronizedtion area 
+        
+        NOTE:  the main purpose of sysmcronizedtion is a to overcome the problem of multhreading when multiple 
+        thread are trying access same reusore of same time on that situation it may provide same wrong result;
+        syncronizedtion is brodly classified in to two categeries;
+        
+        syncronizedtion are two method;
+        method level syncronizedtion;
+        block level sysncronizedtion;
+        
+        
+        
+        
+        SLEEP=>:
+         1.sleep method belong to thread class ,thread is a no need to call sleep from syxncronized contex,
+         sleep method does not realesed the lock on a object during syncronized,sleep method excution complate when a thread om time
+         sleep method excute on current thread, sleep is a static method,sleep has two overloded method,
+         (i)sleep(long millis)
+         (ii)sleep(long millis int nanos)
+         
+         
+         
+         WAIT METHOD=>:
+           1. wait method belong to object class,wait method only use to sysncronized contex
+           wait method realese to lock during syncronized,wait method is intterputed by calling notify and all notify method
+           wait is not static method,wait has three overloded method
+           (i)wait()
+           (ii)wait(long timeout)
+           (iii)wait(long timeout int nanos)
+                   
+                        
+         

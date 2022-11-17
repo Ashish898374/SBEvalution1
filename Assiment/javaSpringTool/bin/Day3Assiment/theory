@@ -1,0 +1,29 @@
+Functional interface in java->
+
+An interface which has only one abstract method is called as functional interface.
+This functional interface can have any number of default, static methods, but can contains only one
+abstract method.
+A functional interface can have methods of the Object class also.
+Functional Interface is also known as Single Abstract Method Interfaces or SAM Interfaces. It is a
+new feature in Java 8,
+
+example:
+
+
+
+
+      @FunctionalInterface
+interface first{
+void sayHello(String name);    // i can say Functional method because only one method abstract method there are no any static and default
+             // method only one abstract method auto maticaly;
+}
+class X implements first{
+public void sayHello(String name){
+System.out.println("Welcome "+name);
+}
+public static void main(String[] args) {
+first i1 = new X();
+i1.sayHello("functional method");
+}
+};
+      

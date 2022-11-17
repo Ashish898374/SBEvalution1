@@ -1,0 +1,43 @@
+
+
+MUTITHREADING=>
+   1. multithreading is a process to execute threads at the time without dependency another thread is called multithreading
+   2. thread class extends mean one class object uses another class and implements any class run will some time
+   
+   
+   
+   
+   BENIFITS OF MULTITHREADING= multithreading is using is use some timworkedery worked handle like you operation execution execute by some tiexpectationxepecetion 
+   soperationopreation will be run; 
+   
+   
+   THREAD=thread is use of the conected by one class and another class first import the class thread  and extends thread after run will 
+   method inside perform your task and like you can write code main method in call the all class thread and one thread only thread in main class
+   
+   
+   
+   THREAD LIFE STYLE= as we know a thread is will independed execution the life style a thread can move move from diffrent state;
+   1.new state 
+   2. runnable state
+   3.running state
+   4.wieting state 
+   5.dead state
+   
+   new state mean (variable.start) and  runnable mean code ready for run now time thread go will running state all code will be run 
+   and after perform the code will move dead state 
+   
+   
+   
+   THREADCLASS= thread class in overide run method and main class in another thread class no import like thread any use of(variable)
+   
+   RUNNABLE= implements runnable class some function in thread but one thread import and variable nameafter start call function
+   
+   
+   
+   RUNMETHOD=run method use of the extends and any implements like thread and runnable run method inside perform code and 
+   start call variable.start call mean excute the class and run method
+   
+   
+   
+   
+   

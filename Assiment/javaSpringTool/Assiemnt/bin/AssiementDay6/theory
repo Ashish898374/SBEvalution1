@@ -1,0 +1,94 @@
+
+
+SYNCHRONIZED METHOD =  for synchronized method the lock will be held throught the method while in syncronized block the lock 
+held only the block scope
+sysncrpnized method lock on object instanc the method in contained in the while a syncronized block can lock any object;
+
+
+
+SYNCRONIZED BLOCK=  syncronized block previes any mode control over lock as you can use any lock to provides mutual
+excution to criticals section code syncronized method always lock either current object and class level lock  if its static syncronized 
+method  
+Note= class level block is use to  static method
+object level block is use to non static method 
+
+
+sysncronized block mean
+sysncronized(this){
+insode the code here 
+
+}
+syncronized method=
+ public synscronized void function(){
+ inside the code here
+ }
+
+ 
+ 
+ 
+ RACE CONDITION= race condition are execute multithreading and some time run the code change the data race is critical condition
+ some class but incrroct behavior of codee, if thread A is reading data from the linked list and another thread B is trying to delete the same data.
+This process leads to a race condition that may result in run time error
+
+
+EXAMPLE=
+class local{
+public void fun1(Stirng name){
+System.out.print("Welcome to start local class");
+try{
+Thread.sleep(1000);
+}
+catch(Exception e){
+}
+System.out.println(name);
+}
+
+
+
+class ThreadA extends Thread{
+local l;
+String name;
+public ThreadA(local l,String name) {
+this.l=l;
+this.name=name;
+}
+@Override
+public void run() {
+l.fun1(name);
+}
+}
+
+
+class ThreadB extends Thread{
+local l;
+String name;
+public ThreadB(local l,String name) {
+this.l=l;
+this.name=name;
+}
+@Override
+public void run() {
+l.fun1(name);
+}
+}
+
+
+
+
+class Main{
+public static void main(String[] args){
+local l=new local();
+// call the local class 
+ThreadA t1=new ThreadA(l,"swanand");  // Arjun and swanand will not run because syncronized class use here 
+ThreadB t2=new ThreadB(l,"Arjun");
+t1.start()
+t2.start();
+}
+}
+
+
+SLEEP= sleep used to put a thread into temperery waiting state mean some time for class stop then will be run  
+
+JOIN= join method used to put the parent thread in temperery waiting state till the completion  child of theory main class waiting  
+all child class run after main class execute 
+
